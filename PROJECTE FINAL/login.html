@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Top 75 - Inici de sessió</title>
+
+    <!-- Tipografia Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="m-0 flex min-h-screen items-center justify-center bg-[#ececec] p-[0.9375rem] font-['Oswald'] text-black">
+
+    <!-- CONTENIDOR PRINCIPAL -->
+    <div
+        class="flex min-h-[32.5rem] w-[80%] max-w-[62.5rem] rounded-[1.5625rem] border-[0.1875rem] border-black bg-white shadow-[0_0.625rem_1.875rem_rgba(0,0,0,0.15)] max-[62rem]:w-[90%] max-[62rem]:flex-col">
+
+        <!-- ZONA ESQUERRA -->
+        <div class="flex flex-1 flex-col items-center justify-center">
+
+            <!-- LOGO NBA -->
+            <img src="img/images.jpg" alt="Logotip de l'NBA"
+                class="w-[20rem] max-w-[85%] object-contain max-[62rem]:mt-5 max-[62rem]:w-[15.625rem]">
+
+            <!-- BOTONS DE NAVEGACIÓ -->
+            <div class="mt-5 flex gap-[0.9375rem] max-[36rem]:flex-col max-[36rem]:gap-[0.625rem]">
+
+                <a href="register.html"
+                    class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
+                    REGISTRA'T
+                </a>
+
+                <a href="inici.html"
+                    class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
+                    TORNAR
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ZONA DRETA -->
+        <div class="flex w-[26.875rem] flex-col justify-center p-[1.875rem] max-[62rem]:w-full max-[36rem]:p-5">
+
+            <h1 class="mb-[1.5625rem] text-center text-[3rem] font-bold text-[#17408B] max-[36rem]:text-[2.2rem]">
+                INICI DE SESSIÓ
+            </h1>
+
+            <!-- FORMULARI -->
+            <form class="w-full">
+
+                <!-- USUARI -->
+                <label for="user" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
+                    USUARI
+                </label>
+
+                <input type="text" id="user" name="user" placeholder="Introdueix el teu usuari"
+                    class="mb-3 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
+
+                <!-- CONTRASENYA -->
+                <label for="password" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
+                    CONTRASENYA
+                </label>
+
+                <input type="password" id="password" name="password" placeholder="Introdueix la contrasenya"
+                    class="mb-3 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
+
+                <!-- RECUPERAR CONTRASENYA -->
+                <div class="mb-4 text-left">
+                    <a href="#"
+                        class="text-[0.8rem] text-[#17408B] underline transition-colors duration-300 hover:text-[#ff002f]">
+                        Has oblidat la contrasenya?
+                    </a>
+                </div>
+
+                <!-- BOTÓ D'ACCÉS -->
+                <button type="submit"
+                    class="mx-auto mt-[0.625rem] block cursor-pointer rounded-[1.25rem] border-2 border-black bg-[#ff002f] px-[1.875rem] py-[0.625rem] text-[0.9rem] font-bold text-white transition-colors duration-300 hover:bg-[#17408B]">
+
+                    INICIA LA SESSIÓ
+
+                </button>
+
+                <!-- SEPARADOR -->
+                <div class="my-6 flex items-center gap-3">
+
+                    <div class="h-px flex-1 bg-gray-400"></div>
+
+                    <span class="text-[0.75rem] font-bold text-gray-500">
+                        O INICIA LA SESSIÓ AMB
+                    </span>
+
+                    <div class="h-px flex-1 bg-gray-400"></div>
+
+                </div>
+
+                <!-- AUTENTICACIÓ AMB GOOGLE I APPLE -->
+                <div class="flex justify-center gap-[0.9375rem]">
+
+                    <!-- GOOGLE -->
+                    <button type="button" aria-label="Inicia la sessió amb Google"
+                        class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+
+                        <img src="img/logogoogle.png" alt="Google" class="h-[1.5625rem] w-[1.5625rem] object-contain">
+
+                    </button>
+
+                    <!-- APPLE -->
+                    <button type="button" aria-label="Inicia la sessió amb Apple"
+                        class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+
+                        <img src="img/logoappel.png" alt="Apple" class="h-[1.5625rem] w-[1.5625rem] object-contain">
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

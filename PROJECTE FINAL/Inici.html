@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Top 75</title>
+
+    <!-- Tipografia Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="m-0 bg-white font-['Oswald'] text-black">
+
+    <!-- CAPÇALERA -->
+    <header class="fixed top-0 left-0 z-50 w-full border-b-[0.1875rem] border-[#17408B] bg-[#d2d2d2]">
+
+        <div class="mx-auto flex max-w-[120rem] items-center justify-between gap-5 px-5 py-2 max-[62rem]:flex-col">
+
+            <!-- LOGO -->
+            <a href="inici.html" class="shrink-0" aria-label="Tornar a l'inici">
+                <img src="img/images.jpg" alt="NBA Logo"
+                    class="h-14 cursor-pointer rounded-[0.9375rem] transition-transform duration-300 hover:scale-105 max-[30rem]:h-12">
+            </a>
+
+            <!-- NAVEGACIÓ -->
+            <nav class="flex-1">
+
+                <ul
+                    class="m-0 flex list-none flex-wrap items-center justify-center gap-6 p-0 max-[75rem]:gap-4 max-[48rem]:gap-3">
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Jugadors
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Equips
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Campionats (Anells)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            MVPs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            All Star
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="text-[1.1875rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Saló de la Fama
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- CERCADOR I ACCÉS -->
+            <div class="flex shrink-0 items-center gap-4 max-[62rem]:flex-wrap max-[62rem]:justify-center">
+
+                <input type="text" placeholder="Cerca jugadors..." aria-label="Cerca jugadors"
+                    class="w-[11.875rem] max-w-full rounded-[0.3125rem] border-2 border-[#17408B] bg-white px-3 py-2 text-[0.9375rem] focus:border-[#ff002f] focus:outline-none">
+
+                <div class="flex items-center gap-2 max-[30rem]:flex-col">
+
+                    <a href="login.html"
+                        class="rounded-[0.3125rem] bg-[#ff002f] px-4 py-2 text-[0.9375rem] font-bold text-white no-underline transition-opacity hover:opacity-80">
+                        Log In
+                    </a>
+
+                    <a href="register.html"
+                        class="rounded-[0.3125rem] bg-[#17408B] px-4 py-2 text-[0.9375rem] font-bold text-white no-underline transition-opacity hover:opacity-80">
+                        Register
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CONTINGUT PRINCIPAL -->
+    <main class="pb-[1.875rem] pt-[6.5625rem] max-[62rem]:pt-[10.625rem]">
+
+        <div
+            class="mx-auto grid max-w-full grid-cols-[minmax(0,1fr)_12.5rem] items-start gap-5 px-6 max-[62rem]:grid-cols-1 max-[48rem]:px-5 max-[30rem]:px-3">
+
+            <!-- SECCIÓ PRINCIPAL -->
+            <section
+                class="min-w-0 rounded-[0.625rem] bg-white px-[1.5625rem] pb-[1.875rem] pt-0 text-center max-[30rem]:px-2">
+
+                <!-- TÍTOL PRINCIPAL -->
+                <h1
+                    class="mb-4 mt-0 text-center text-[2.5rem] font-bold uppercase tracking-[0.125rem] text-[#17408B] max-[30rem]:text-[1.75rem]">
+                    Els 75 millors jugadors de la NBA
+                </h1>
+
+                <!-- TEXT INTRODUCTORI -->
+                <p
+                    class="mx-auto mb-[1.875rem] max-w-[65.625rem] text-center text-[1.125rem] leading-[1.8] text-[#444]">
+                    El NBA 75th Anniversary Team és una selecció dels 75 millors jugadors
+                    de la història de la NBA, anunciada l'any 2021 per commemorar el
+                    75è aniversari de la lliga. Aquesta llista reuneix algunes de les
+                    figures més influents del bàsquet, des de llegendes com Michael Jordan,
+                    Magic Johnson i Larry Bird fins a estrelles més recents com LeBron James,
+                    Stephen Curry i Kevin Durant. Aquesta selecció representa diferents
+                    generacions de jugadors que han deixat una empremta important en la
+                    història i l'evolució del bàsquet.
+                </p>
+
+                <!-- GRAELLA DE 75 TARGETES BUIDES -->
+                <div id="players-grid"
+                    class="mx-auto grid grid-cols-4 gap-5 px-5 max-[68.75rem]:grid-cols-3 max-[48rem]:grid-cols-2 max-[30rem]:grid-cols-1 max-[30rem]:px-2">
+                </div>
+
+            </section>
+
+            <!-- BARRA LATERAL -->
+            <aside
+                class="mt-[3.4375rem] h-fit rounded-[0.625rem] border-2 border-[#17408B] bg-white p-4 text-center max-[62rem]:order-2 max-[62rem]:mt-0">
+
+                <!-- TÍTOL DE LA BARRA LATERAL -->
+                <h2
+                    class="mb-5 mt-0 text-center text-[1.3125rem] font-bold uppercase tracking-[0.0625rem] text-[#ff002f]">
+                    Ordenar per
+                </h2>
+
+                <ul class="m-0 list-none space-y-3 p-0">
+
+                    <!-- DESPLEGABLE DE POSICIÓ -->
+                    <li>
+                        <details>
+
+                            <summary
+                                class="cursor-pointer text-center text-[1rem] font-bold text-[#17408B] hover:text-[#ff002f]">
+                                Posició
+                            </summary>
+
+                            <ul class="ml-0 mt-2 list-none space-y-2 border-t-2 border-[#d2d2d2] p-0 pt-2">
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Base (PG)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Escorta (SG)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Aler (SF)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Ala-pivot (PF)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Pivot (C)
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- DESPLEGABLE DE NACIONALITAT -->
+                    <li>
+                        <details>
+
+                            <summary
+                                class="cursor-pointer text-center text-[1rem] font-bold text-[#17408B] hover:text-[#ff002f]">
+                                Nacionalitat
+                            </summary>
+
+                            <ul class="ml-0 mt-2 list-none space-y-2 border-t-2 border-[#d2d2d2] p-0 pt-2">
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Estats Units
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Canadà
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        França
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Espanya
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Sèrbia
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="text-[#17408B] no-underline hover:text-[#ff002f]">
+                                        Altres
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- ALTRES OPCIONS D'ORDENACIÓ -->
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Partits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Punts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Rebots
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Assistències
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Robatoris
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Taps
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Doble-doble
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block text-center text-[1rem] font-bold text-[#17408B] no-underline transition-colors hover:text-[#ff002f]">
+                            Triple-doble
+                        </a>
+                    </li>
+
+                </ul>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- CREACIÓ DE LES 75 TARGETES BUIDES -->
+    <script>
+        const grid = document.getElementById("players-grid");
+
+        for (let i = 0; i < 75; i++) {
+            const card = document.createElement("div");
+
+            card.className =
+                "h-[12.5rem] rounded-[0.625rem] border-[0.1875rem] border-[#17408B] bg-[#d2d2d2] " +
+                "transition duration-200 hover:scale-[1.03] hover:border-[#ff002f]";
+
+            grid.appendChild(card);
+        }
+    </script>
+
+</body>
+
+</html>
