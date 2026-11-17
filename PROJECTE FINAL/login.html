@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicia sessió a NBA Top 75.">
     <title>NBA Top 75 - Inici de sessió</title>
 
     <!-- Tipografia Oswald -->
@@ -14,119 +16,273 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        /* Enllaç per saltar directament al contingut */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 100;
+            padding: 0.75rem 1rem;
+            background: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* Focus visible per a la navegació amb teclat */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible {
+            outline: 3px solid #17408B;
+            outline-offset: 4px;
+        }
+
+        /* Respectar la preferència de moviment reduït */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 
-<body class="m-0 flex min-h-screen items-center justify-center bg-[#ececec] p-[0.9375rem] font-['Oswald'] text-black">
+<body class="m-0 flex min-h-screen flex-col items-center bg-[#ececec] font-['Oswald'] text-black">
+
+    <!-- ENLLAÇ PER SALTAR AL CONTINGUT -->
+    <a href="#contingut" class="skip-link">
+        Salta al contingut principal
+    </a>
 
     <!-- CONTENIDOR PRINCIPAL -->
-    <div
-        class="flex min-h-[32.5rem] w-[80%] max-w-[62.5rem] rounded-[1.5625rem] border-[0.1875rem] border-black bg-white shadow-[0_0.625rem_1.875rem_rgba(0,0,0,0.15)] max-[62rem]:w-[90%] max-[62rem]:flex-col">
+    <main id="contingut"
+        class="flex flex-1 w-full items-center justify-center px-[0.9375rem] py-[0.9375rem]">
 
-        <!-- ZONA ESQUERRA -->
-        <div class="flex flex-1 flex-col items-center justify-center">
+        <div
+            class="flex min-h-[32.5rem] w-[80%] max-w-[62.5rem] rounded-[1.5625rem] border-[0.1875rem] border-black bg-white shadow-[0_0.625rem_1.875rem_rgba(0,0,0,0.15)] max-[62rem]:w-[90%] max-[62rem]:flex-col">
 
-            <!-- LOGO NBA -->
-            <img src="img/images.jpg" alt="Logotip de l'NBA"
-                class="w-[20rem] max-w-[85%] object-contain max-[62rem]:mt-5 max-[62rem]:w-[15.625rem]">
+            <!-- ZONA ESQUERRA -->
+            <section aria-label="Navegació principal"
+                class="flex flex-1 flex-col items-center justify-center">
 
-            <!-- BOTONS DE NAVEGACIÓ -->
-            <div class="mt-5 flex gap-[0.9375rem] max-[36rem]:flex-col max-[36rem]:gap-[0.625rem]">
+                <!-- LOGO NBA -->
+                <img src="img/images.jpg" alt="Logotip de l'NBA"
+                    class="w-[20rem] max-w-[85%] object-contain max-[62rem]:mt-5 max-[62rem]:w-[15.625rem]">
 
-                <a href="register.html"
-                    class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
-                    REGISTRA'T
-                </a>
+                <!-- BOTONS DE NAVEGACIÓ -->
+                <nav aria-label="Navegació del compte"
+                    class="mt-5 flex gap-[0.9375rem] max-[36rem]:flex-col max-[36rem]:gap-[0.625rem]">
 
-                <a href="inici.html"
-                    class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
-                    TORNAR
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- ZONA DRETA -->
-        <div class="flex w-[26.875rem] flex-col justify-center p-[1.875rem] max-[62rem]:w-full max-[36rem]:p-5">
-
-            <h1 class="mb-[1.5625rem] text-center text-[3rem] font-bold text-[#3A6AA7] max-[36rem]:text-[2.2rem]">
-                INICI DE SESSIÓ
-            </h1>
-
-            <!-- FORMULARI -->
-            <form class="w-full">
-
-                <!-- USUARI -->
-                <label for="user" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
-                    USUARI
-                </label>
-
-                <input type="text" id="user" name="user" placeholder="Introdueix el teu usuari"
-                    class="mb-3 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
-
-                <!-- CONTRASENYA -->
-                <label for="password" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
-                    CONTRASENYA
-                </label>
-
-                <input type="password" id="password" name="password" placeholder="Introdueix la contrasenya"
-                    class="mb-3 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
-
-                <!-- RECUPERAR CONTRASENYA -->
-                <div class="mb-4 text-left">
-                    <a href="#"
-                        class="text-[0.8rem] text-[#17408B] underline transition-colors duration-300 hover:text-[#ff002f]">
-                        Has oblidat la contrasenya?
+                    <a href="register.html"
+                        class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
+                        REGISTRA'T
                     </a>
-                </div>
 
-                <!-- BOTÓ D'ACCÉS -->
-                <button type="submit"
-                    class="mx-auto mt-[0.625rem] block cursor-pointer rounded-[1.25rem] border-2 border-black bg-[#ff002f] px-[1.875rem] py-[0.625rem] text-[0.9rem] font-bold text-white transition-colors duration-300 hover:bg-[#17408B]">
+                    <a href="inici.html"
+                        class="rounded-[1.25rem] border-2 border-black bg-[#3A6AA7] px-[1.5625rem] py-[0.625rem] font-bold text-black no-underline transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
+                        TORNAR
+                    </a>
 
-                    INICIA LA SESSIÓ
+                </nav>
 
-                </button>
+            </section>
 
-                <!-- SEPARADOR -->
-                <div class="my-6 flex items-center gap-3">
+            <!-- ZONA DRETA -->
+            <section aria-labelledby="titol-login"
+                class="flex w-[26.875rem] flex-col justify-center p-[1.875rem] max-[62rem]:w-full max-[36rem]:p-5">
 
-                    <div class="h-px flex-1 bg-gray-400"></div>
+                <h1 id="titol-login"
+                    class="mb-[1.5625rem] text-center text-[3rem] font-bold text-[#3A6AA7] max-[36rem]:text-[2.2rem]">
+                    INICI DE SESSIÓ
+                </h1>
 
-                    <span class="text-[0.75rem] font-bold text-gray-500">
-                        O INICIA LA SESSIÓ AMB
-                    </span>
+                <!-- FORMULARI -->
+                <form id="login-form" class="w-full" novalidate>
 
-                    <div class="h-px flex-1 bg-gray-400"></div>
+                    <!-- MISSATGE GENERAL -->
+                    <p id="missatge-error" role="alert" aria-live="assertive"
+                        class="mb-3 text-center text-sm font-bold text-[#b00020]" hidden>
+                    </p>
 
-                </div>
+                    <!-- USUARI -->
+                    <label for="user" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
+                        USUARI
+                    </label>
 
-                <!-- AUTENTICACIÓ AMB GOOGLE I APPLE -->
-                <div class="flex justify-center gap-[0.9375rem]">
+                    <input type="text" id="user" name="user"
+                        placeholder="Introdueix el teu usuari"
+                        autocomplete="username"
+                        required
+                        aria-describedby="error-user"
+                        class="mb-1 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
 
-                    <!-- GOOGLE -->
-                    <button type="button" aria-label="Inicia la sessió amb Google"
-                        class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+                    <p id="error-user" class="mb-3 ml-2 text-sm font-bold text-[#b00020]"
+                        aria-live="polite"></p>
 
-                        <img src="img/logogoogle.png" alt="Google" class="h-[1.5625rem] w-[1.5625rem] object-contain">
+                    <!-- CONTRASENYA -->
+                    <label for="password" class="mb-1 ml-[0.625rem] block text-[0.7rem] font-bold">
+                        CONTRASENYA
+                    </label>
+
+                    <input type="password" id="password" name="password"
+                        placeholder="Introdueix la contrasenya"
+                        autocomplete="current-password"
+                        required
+                        aria-describedby="error-password"
+                        class="mb-1 h-[3rem] w-full rounded-[1.25rem] border-2 border-black bg-[#d2d2d2] px-[0.9375rem] py-[0.625rem] text-[0.9rem] placeholder:text-[#555] focus:border-[#17408B] focus:outline-none">
+
+                    <p id="error-password" class="mb-3 ml-2 text-sm font-bold text-[#b00020]"
+                        aria-live="polite"></p>
+
+                    <!-- RECUPERAR CONTRASENYA -->
+                    <div class="mb-4 text-left">
+                        <a href="#"
+                            class="text-[0.8rem] text-[#17408B] underline transition-colors duration-300 hover:text-[#b00020]">
+                            Has oblidat la contrasenya?
+                        </a>
+                    </div>
+
+                    <!-- BOTÓ D'ACCÉS -->
+                    <button type="submit"
+                        class="mx-auto mt-[0.625rem] block cursor-pointer rounded-[1.25rem] border-2 border-black bg-[#ff002f] px-[1.875rem] py-[0.625rem] text-[0.9rem] font-bold text-black transition-colors duration-300 hover:bg-[#17408B] hover:text-white">
+
+                        INICIA LA SESSIÓ
 
                     </button>
 
-                    <!-- APPLE -->
-                    <button type="button" aria-label="Inicia la sessió amb Apple"
-                        class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+                    <!-- MISSATGE DE RESULTAT -->
+                    <p id="resultat-login" role="status" aria-live="polite"
+                        class="mt-3 text-center text-sm font-bold">
+                    </p>
 
-                        <img src="img/logoappel.png" alt="Apple" class="h-[1.5625rem] w-[1.5625rem] object-contain">
+                    <!-- SEPARADOR -->
+                    <div class="my-6 flex items-center gap-3" aria-hidden="true">
 
-                    </button>
+                        <div class="h-px flex-1 bg-gray-400"></div>
 
-                </div>
+                        <span class="text-[0.75rem] font-bold text-gray-600">
+                            O INICIA LA SESSIÓ AMB
+                        </span>
 
-            </form>
+                        <div class="h-px flex-1 bg-gray-400"></div>
+
+                    </div>
+
+                    <!-- AUTENTICACIÓ AMB GOOGLE I APPLE -->
+                    <div class="flex justify-center gap-[0.9375rem]">
+
+                        <!-- GOOGLE -->
+                        <button type="button"
+                            aria-label="Inicia la sessió amb Google"
+                            class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+
+                            <img src="img/logogoogle.png" alt=""
+                                class="h-[1.5625rem] w-[1.5625rem] object-contain">
+
+                        </button>
+
+                        <!-- APPLE -->
+                        <button type="button"
+                            aria-label="Inicia la sessió amb Apple"
+                            class="flex h-[2.8125rem] w-[2.8125rem] cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white transition-colors duration-300 hover:bg-[#ececec]">
+
+                            <img src="img/logoappel.png" alt=""
+                                class="h-[1.5625rem] w-[1.5625rem] object-contain">
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
 
         </div>
 
-    </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#101010] px-4 py-5 text-center">
+        <p class="text-sm text-gray-400">
+            © 2026 NBA Top 75. Tots els drets reservats.
+        </p>
+    </footer>
+
+    <!-- VALIDACIÓ DEL FORMULARI -->
+    <script>
+        const formulari = document.getElementById("login-form");
+
+        const usuari = document.getElementById("user");
+        const contrasenya = document.getElementById("password");
+
+        const errorUsuari = document.getElementById("error-user");
+        const errorContrasenya = document.getElementById("error-password");
+
+        const resultat = document.getElementById("resultat-login");
+
+        formulari.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Reiniciar errors
+            errorUsuari.textContent = "";
+            errorContrasenya.textContent = "";
+            resultat.textContent = "";
+
+            usuari.removeAttribute("aria-invalid");
+            contrasenya.removeAttribute("aria-invalid");
+
+            let correcte = true;
+
+            // Validar usuari
+            if (usuari.value.trim() === "") {
+                errorUsuari.textContent = "Has d'introduir el teu usuari.";
+                usuari.setAttribute("aria-invalid", "true");
+                correcte = false;
+            }
+
+            // Validar contrasenya
+            if (contrasenya.value.trim() === "") {
+                errorContrasenya.textContent = "Has d'introduir la contrasenya.";
+                contrasenya.setAttribute("aria-invalid", "true");
+                correcte = false;
+            }
+
+            // Situar el focus al primer camp amb error
+            if (!correcte) {
+                if (usuari.value.trim() === "") {
+                    usuari.focus();
+                } else {
+                    contrasenya.focus();
+                }
+
+                return;
+            }
+
+            // Encara no hi ha connexió amb el servidor
+            resultat.textContent =
+                "Els camps són correctes, però l'inici de sessió encara no està connectat al servidor.";
+        });
+
+        // Eliminar errors quan l'usuari modifica els camps
+        usuari.addEventListener("input", function () {
+            errorUsuari.textContent = "";
+            usuari.removeAttribute("aria-invalid");
+        });
+
+        contrasenya.addEventListener("input", function () {
+            errorContrasenya.textContent = "";
+            contrasenya.removeAttribute("aria-invalid");
+        });
+    </script>
 
 </body>
 
